@@ -19,10 +19,6 @@ li{
 	margin-left: 90px;
 }
 
-#btn_signout{
-	margin-right: 145px;
-}
-
 .card-header{
 	background-color: #06e0fd !important;
 	font-weight: bold;
@@ -48,4 +44,3 @@ li{
 	margin-left: auto;
 	float: right;
 }
-
