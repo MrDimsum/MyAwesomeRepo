@@ -40,7 +40,7 @@
                    </div>
                    <div class="div">
                         <h5>Username</h5>
-                        <input type="text" class="input" name="username">
+                        <input type="text" class="input" name="username" autocomplete="off" >
                    </div>
                 </div>
               <div class="input-div one">
@@ -49,7 +49,7 @@
                  </div>
                  <div class="div">
                     <h5>First Name</h5>
-                    <input type="text" class="input" name="firstname">
+                    <input type="text" class="input" name="firstname" autocomplete="off" style="text-transform: capitalize">
                  </div>
               </div>
               <div class="input-div one">
@@ -58,7 +58,7 @@
                  </div>
                  <div class="div">
                     <h5>Last Name</h5>
-                    <input type="text" class="input" name="lastname">
+                    <input type="text" class="input" name="lastname" autocomplete="off" style="text-transform: capitalize">
                  </div>
               </div>
               <div class="input-div one">
