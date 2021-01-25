@@ -5,38 +5,36 @@
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'helvetica', sans-serif;
     overflow: hidden;
     background-image: url("../img/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-
-
-
-
 .login-content{
     align-items: center;
     text-align: center;
-    max-width: 50%;
+    max-width: 30%;
     margin: auto;
     border: 2px  ;
-    border-radius: 5px;
+    border-radius: 50px;
     margin-top: 90px;
     background-color: rgba(60, 60, 60, 0.4);
     padding-top: 20px;
+    height: 80vh;
 }
 .signup-content{
     align-items: center;
     text-align: center;
-    max-width: 50%;
+    max-width: 33%;
     margin: auto;
     border: 2px  ;
-    border-radius: 5px;
+    border-radius: 35px;
     margin-top: 20px;
     background-color: rgba(60, 60, 60, 0.4);
     padding-top: 20px;
+    height: 90vh;
 }
 form{
     width: 360px;
@@ -46,6 +44,7 @@ form{
 
 .login-content img{
     height: 100px;
+    margin-top: 30px;
 }
 
 .login-content h2{
@@ -152,7 +151,7 @@ input:-webkit-autofill:active {
 }
 
 .input-div.focus > .i > i{
-    color: #3e96fa;
+    color: #00a2ff;
 }
 
 .input-div > div > input{
@@ -220,7 +219,7 @@ a:hover{
     border-radius: 25px;
     outline: none;
     border: none;
-    background-image: linear-gradient(to right, #3e96fa, #3e96fa, #0058bb);
+    background-image: linear-gradient(to right, #d24efa, #2ebfe4, #00ffdd);
     background-size: 200%;
     font-size: 1.2rem;
     color: #fff;
