@@ -10,7 +10,7 @@ if(isset($_SESSION['user_id'])){
 <html>
 <head>
 	<title>My Notes</title>
- <link rel="icon" href="img/icon.png">
+ <link rel="icon" href="img/note.png">
 	
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -68,7 +68,7 @@ if(isset($_SESSION['user_id'])){
         <form>
           <div class="form-group">
             <label for="note-title" class="col-form-label">Title:</label>
-            <input type="text" class="form-control" id="note-title">
+            <input type="text" class="form-control" id="note-title" autocomplete="off">
           </div>
           <div class="form-group">
             <label for="note-description" class="col-form-label">Description:</label>
@@ -97,7 +97,7 @@ if(isset($_SESSION['user_id'])){
         <form>
           <div class="form-group">
             <label for="edit_note-title" class="col-form-label">Title:</label>
-            <input type="text" class="form-control" id="edit_note-title">
+            <input type="text" class="form-control" id="edit_note-title" autocomplete="off">
           </div>
           <div class="form-group">
             <label for="edit_note-description" class="col-form-label">Description:</label>
