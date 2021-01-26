@@ -42,7 +42,7 @@
         //creates a hash 
         $password = password_hash($cfm_password, PASSWORD_BCRYPT);
         $stmt = $con->prepare("INSERT INTO users(username, firstname, lastname, password ) VALUES (?,?,?,?)");
-        $stmt->bind_param('ssss ', $username,  $firstname,  $lastname,  $password);
+        $stmt->bind_param('ssss', $username,  $firstname,  $lastname,  $password);
         $stmt->execute();
         /* Redirect the browser and a superglobal var ($GET) in the signup.php can fetch the success var containing
            a string*/
