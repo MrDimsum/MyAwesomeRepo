@@ -49,8 +49,7 @@ form{
 
 .login-content h2{
     margin: 15px 0;
-    color: #333;
-    
+    color: rgb(8, 8, 8);
     font-size: 2rem;
 }
 
@@ -60,7 +59,7 @@ form{
     grid-template-columns: 7% 93%;
     margin: 25px 0;
     padding: 5px 0;
-    border-bottom: 2px solid #d9d9d9;
+    
 }
 
 .signup-content .input-div.one{
@@ -73,7 +72,6 @@ form{
 .signup-content h2{
     margin: 15px 0;
     color: rgb(255, 255, 255);
-    
     font-size: 2rem;
 }
 
@@ -83,11 +81,14 @@ form{
     grid-template-columns: 7% 93%;
     margin: 25px 0;
     padding: 5px 0;
-    border-bottom: 2px solid #d9d9d9;
+    
 }
 
 .signup-content .input-div.one{
     margin-top: 0;
+}
+::placeholder{
+    color: whitesmoke;
 }
 
 input:-webkit-autofill,
@@ -113,25 +114,6 @@ input:-webkit-autofill:active {
     height: 45px;
 }
 
-.input-div > div > h5{
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgb(60, 60, 60,.4);
-    font-size: 18px;
-    transition: .3s;
-}
-
-.input-div:before, .input-div:after{
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    width: 0%;
-    height: 2px;
-    background-color: #3e96fa;
-    transition: .4s;
-}
 
 .input-div:before{
     right: 50%;
@@ -150,17 +132,14 @@ input:-webkit-autofill:active {
     font-size: 15px;
 }
 
-.input-div.focus > .i > i{
-    color: #00a2ff;
-}
-
 .input-div > div > input{
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    border: none;
+    border-radius: 20px;
+    border: 1px solid #ccc;
     outline: none;
     background: none;
     padding: 0.5rem 0.7rem;
@@ -169,9 +148,7 @@ input:-webkit-autofill:active {
     font-family: 'helvetica', sans-serif;
 }
 
-.input-div.pass{
-    margin-bottom: 4px;
-}
+
 
 a{
     display: block;
@@ -203,7 +180,7 @@ p{
     display: block;
     text-align: right;
     text-decoration: none;
-    color: #999;
+    color: rgb(22, 22, 22);
     font-size: 0.9rem;
     transition: .3s;
 }
