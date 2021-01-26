@@ -1,69 +1,54 @@
-<?php
-date_default_timezone_set('Asia/Manila');
-?>
+<?php 
+//connect to db server
+require_once('dbconnect.php');
+//start of session to store information (in variables) to be used across multiple pages
+session_start();
+        //collect data and stored in their specific variables
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $newhash ="";
+        /*if user did'nt input user and pass, the superglobal var $GET['Empty'] in the login.php can
+         fetch the  variable empty in the header function.*/
+        if(empty($username) || empty($password)){
+            //Redirect the browser
+            header("location:../html/login.php?Empty= You did not input anything!");
+        }
+        else{
+            $stmt = $con->prepare("SELECT user_id, firstname, lastname, username, password FROM users WHERE username=? LIMIT 1");
+            $stmt->bind_param('s', $username);
+            //execute query
+            $stmt->execute();
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Notes</title>
-    <link rel="icon" href="../img/note.png">
-    <link rel="stylesheet" type="text/css" href="../css/app.css">
-    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-    
-        
-        <div class="login-content">
-            <form id="loginform" class="form-horizontal" role="form" action="../php/login.php" method="POST">
-                <img src="../img/avatar.png">
-                <h2 class="title">Sign in to your Account</h2>
-              <?php
-                //if true,can fetch the string stored in the empty var in the /php/login.php file
-                if(@$_GET['Empty']==true)
-                {
-              ?>
-              <p class="txt_error"> <?php echo $_GET['Empty'] ?>  </p>
-                                                                 
-              <?php
-                }
-              ?>
-              <?php 
-                //if true,can fetch the string stored in the invalid var in the /php/login.php file
-                if(@$_GET['Invalid']==true)
-                {
-              ?>
-              <p class="txt_error"> <?php echo $_GET['Invalid'] ?>  </p>
-            
-                                              
-              <?php
-                }
-              ?>
-              
-                <div class="input-div one">
-                   <div class="i">
-                        <i class="fas fa-user"></i>
-                   </div>
-                   <div class="div">
-                        
-                        <input type="text" class="input" name="username" autocomplete="off" placeholder="Username">
-                   </div>
-                </div>
-                <div class="input-div pass">
-                   <div class="i"> 
-                        <i class="fas fa-lock"></i>
-                   </div>
-                   <div class="div">      
-                        <input type="password" class="input" name="password"autocomplete="off" placeholder="Password">
-                   </div>
-                </div>
-                <a href="#">Forgot Password?</a>
-                <input type="submit" class="btn" value="Login" name="Login">
-                <p class="txt_signup"> New User? <a class="txt_signup" href="signup.php">Sign up here.</a> </p>
+            $stmt->bind_result($user_ID, $firstname, $lastname, $username, $hash);
+            /* store result */
+            $stmt->store_result();
+           
+            if($stmt->num_rows == 1){
+                //fetch data, the MySQL client/server protocol places the data for the bound columns into the specified variables 
+                while($stmt->fetch()){
                 
-            </form>
-        </div>
+                    if(password_verify($password, $hash)){
+                        // Set session variables to be use in index.php
+                        $_SESSION['user_id']=$user_ID;
+                        $_SESSION['firstname']=$firstname;
+                        $_SESSION['lastname']=$lastname;
+                        //redirect browser
+                        header("location:../index.php");
+                    }
+                    else{
+                         /*Redirect the browser and a superglobal var ($GET) in the signup.php can fetch 
+                         the invalid var containing a string*/
+                    header("location:../html/login.php?Invalid= Incorrect Password!");     
+                    }
+                }
+            }
+
+            else{
+                header("location:../html/login.php?Invalid= Username not found!");
+            }
+                
+            $stmt->close();           
+        } 
     
-    
-</body>
-</html>
+
+?>
