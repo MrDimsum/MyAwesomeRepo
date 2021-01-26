@@ -36,8 +36,8 @@
                         <i class="fas fa-user"></i>
                    </div>
                    <div class="div">
-                        <h5>Username</h5>
-                        <input type="text" class="input" name="username" autocomplete="off" >
+                        
+                        <input type="text" class="input" name="username" autocomplete="off" placeholder="UserName">
                    </div>
                 </div>
               <div class="input-div one">
@@ -45,8 +45,8 @@
                     <i class="fas fa-user"></i>
                  </div>
                  <div class="div">
-                    <h5>First Name</h5>
-                    <input type="text" class="input" name="firstname" autocomplete="off" style="text-transform: capitalize">
+                    
+                    <input type="text" class="input" name="firstname" autocomplete="off" style="text-transform: capitalize"placeholder="First Name">
                  </div>
               </div>
               <div class="input-div one">
@@ -54,8 +54,8 @@
                     <i class="fas fa-user"></i>
                  </div>
                  <div class="div">
-                    <h5>Last Name</h5>
-                    <input type="text" class="input" name="lastname" autocomplete="off" style="text-transform: capitalize">
+                    
+                    <input type="text" class="input" name="lastname" autocomplete="off" style="text-transform: capitalize" placeholder="Lastname">
                  </div>
               </div>
               <div class="input-div one">
@@ -63,8 +63,8 @@
                     <i class="fas fa-lock"></i>
                  </div>
                  <div class="div">
-                    <h5>Password</h5>
-                    <input type="password" class="input" name="password">
+                    
+                    <input type="password" class="input" name="password" placeholder="password">
                  </div>
               </div>
                 <div class="input-div pass">
@@ -72,8 +72,8 @@
                         <i class="fas fa-lock"></i>
                    </div>
                    <div class="div">
-                        <h5>Confirm Password</h5>
-                        <input type="password" class="input" name="confirmpassword">
+                        
+                        <input type="password" class="input" name="confirmpassword" placeholder="confirm password">
                    </div>
                 </div>
                 <input type="submit" class="btn" value="register" name="register">
