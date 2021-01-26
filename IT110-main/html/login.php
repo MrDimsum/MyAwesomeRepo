@@ -8,18 +8,18 @@ date_default_timezone_set('Asia/Manila');
     <title>My Notes</title>
     <link rel="icon" href="../img/note.png">
     <link rel="stylesheet" type="text/css" href="../css/app.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div class="container">
+    
         
         <div class="login-content">
             <form id="loginform" class="form-horizontal" role="form" action="../php/login.php" method="POST">
                 <img src="../img/avatar.png">
                 <h2 class="title">Sign in to your Account</h2>
               <?php
+                //if true,can fetch the string stored in the empty var in the /php/login.php file
                 if(@$_GET['Empty']==true)
                 {
               ?>
@@ -29,6 +29,7 @@ date_default_timezone_set('Asia/Manila');
                 }
               ?>
               <?php 
+                //if true,can fetch the string stored in the invalid var in the /php/login.php file
                 if(@$_GET['Invalid']==true)
                 {
               ?>
@@ -45,7 +46,7 @@ date_default_timezone_set('Asia/Manila');
                    </div>
                    <div class="div">
                         <h5>Username</h5>
-                        <input type="text" class="input" name="username">
+                        <input type="text" class="input" name="username" autocomplete="off">
                    </div>
                 </div>
                 <div class="input-div pass">
@@ -54,7 +55,7 @@ date_default_timezone_set('Asia/Manila');
                    </div>
                    <div class="div">
                         <h5>Password</h5>
-                        <input type="password" class="input" name="password">
+                        <input type="password" class="input" name="password"autocomplete="off">
                    </div>
                 </div>
                 <a href="#">Forgot Password?</a>
@@ -63,7 +64,7 @@ date_default_timezone_set('Asia/Manila');
                 
             </form>
         </div>
-    </div>
+    
     <script type="text/javascript" src="../js/main.js"></script>
 </body>
 </html>
