@@ -187,16 +187,16 @@ a{
 }
 
 .txt_error{
-    padding-bottom: 15px;
+   
     display: inline-block;
     color: red;
 
 }
 
 .txt_success{
-    padding-bottom: 15px;
+    padding-bottom: 5px;
     display: inline-block;
-    color: #2DCD96;
+    color: rgb(27, 197, 138);
 
 }
 p{
