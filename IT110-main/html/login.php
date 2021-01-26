@@ -45,17 +45,16 @@ date_default_timezone_set('Asia/Manila');
                         <i class="fas fa-user"></i>
                    </div>
                    <div class="div">
-                        <h5>Username</h5>
-                        <input type="text" class="input" name="username" autocomplete="off">
+                        
+                        <input type="text" class="input" name="username" autocomplete="off" placeholder="Username">
                    </div>
                 </div>
                 <div class="input-div pass">
                    <div class="i"> 
                         <i class="fas fa-lock"></i>
                    </div>
-                   <div class="div">
-                        <h5>Password</h5>
-                        <input type="password" class="input" name="password"autocomplete="off">
+                   <div class="div">      
+                        <input type="password" class="input" name="password"autocomplete="off" placeholder="Password">
                    </div>
                 </div>
                 <a href="#">Forgot Password?</a>
@@ -65,6 +64,6 @@ date_default_timezone_set('Asia/Manila');
             </form>
         </div>
     
-    <script type="text/javascript" src="../js/main.js"></script>
+    
 </body>
 </html>
